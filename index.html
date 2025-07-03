@@ -36,14 +36,12 @@
       color: #1ed6ff;
     }
 
-    /* --- Wrapper --- */
     .pageWrapper {
       max-width: 900px;
       margin: 0 auto;
       padding: 2rem 1rem 4rem;
     }
 
-    /* --- Header --- */
     .hero {
       text-align: center;
       margin-bottom: 3rem;
@@ -76,7 +74,6 @@
       color: #1ed6ff;
     }
 
-    /* --- Sections --- */
     .section {
       margin-bottom: 3rem;
       opacity: 0;
@@ -107,29 +104,40 @@
       color: #cbd5e1;
     }
 
-    /* --- Skill grid --- */
-    .skillGrid {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    /* --- Enhanced Skills Grid --- */
+    .skillsWrap {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
     }
-    .skillItem {
-      background: #1e293b;
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
+
+    .skillCard {
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid #334155;
+      padding: 1rem;
+      border-radius: 10px;
       text-align: center;
-      font-weight: 600;
       color: #60a5fa;
-      box-shadow: 0 3px 7px rgba(15, 45, 78, 0.6);
-      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.25s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
     }
-    .skillItem:hover {
-      background: #2563eb;
-      color: #e0e7ff;
-      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.8);
+
+    .skillCard i {
+      font-size: 1.8rem;
+      color: #1ed6ff;
+    }
+
+    .skillCard:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+      background: rgba(30, 58, 138, 0.8);
+      color: #e0f2fe;
     }
 
     /* --- Projects --- */
@@ -210,7 +218,6 @@
       background: #1e40af;
     }
 
-    /* --- Footer --- */
     .footer {
       text-align: center;
       font-size: 0.9rem;
@@ -239,23 +246,40 @@
 
     <section class="section fade-in">
       <h2 class="sectionTitle">About Me</h2>
-      <p class="paragraph">I'm someone who’s deeply passionate about technology and science, always driven to explore, learn, and create. With good knowledge of Python, MySQL, MongoDB, C programming, networking, operating systems, and frontend development.I'm also highly passionate about research—constantly seeking innovative ways to push boundaries and contribute meaningfully to the tech space. I love diving into challenges and turning them into impactful solutions. Figma and other design tools help me bring my ideas to life with a creative touch.Always curious. Always learning.Also curious to dive on new problems and brige efficient solutions on real world tech problems
-</p>
+      <p class="paragraph">
+        I'm someone who’s deeply passionate about technology and science, always driven to explore, learn, and create. With good knowledge of Python, Rust, MySQL, MongoDB, C programming, DataScience, and DeepLearning. What excites me most is working on real-world tech problems and finding efficient, meaningful solutions. I’m always curious, always evolving, and driven by the urge to research, create, and contribute something impactful to the tech world. Whether it's coding, experimenting, or just thinking outside the box—I’m in it for the journey, the learning, and the love of building what matters.
+      </p>
     </section>
 
     <section class="section fade-in">
       <h2 class="sectionTitle">Skills</h2>
-      <ul class="skillGrid">
-        <li class="skillItem">Python</li>
-        <li class="skillItem">C</li>
-        <li class="skillItem">Rust</li>
-        <li class="skillItem">MySQL</li>
-        <li class="skillItem">MongoDB</li>
-        <li class="skillItem">Data Science</li>
-      </ul>
+      <div class="skillsWrap">
+        <div class="skillCard">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="skillCard">
+          <i class="fas fa-code"></i>
+          <span>C</span>
+        </div>
+        <div class="skillCard">
+          <i class="fas fa-gears"></i>
+          <span>Rust</span>
+        </div>
+        <div class="skillCard">
+          <i class="fas fa-database"></i>
+          <span>MySQL</span>
+        </div>
+        <div class="skillCard">
+          <i class="fas fa-leaf"></i>
+          <span>MongoDB</span>
+        </div>
+        <div class="skillCard">
+          <i class="fas fa-chart-line"></i>
+          <span>Data Science</span>
+        </div>
+      </div>
     </section>
-
-    
 
     <section class="section fade-in">
       <h2 class="sectionTitle">Projects</h2>
@@ -266,23 +290,19 @@
         </a>
         <a class="projectCard" href="#" target="_blank" rel="noopener">
           <h3>Lumora Ai</h3>
-          <p>Personal voice assistant powered by deep reinforcement learning with emotional intelligence using Machine Learning techniques Still on Development Phase.</p>
+          <p>Personal voice assistant powered by deep reinforcement learning with emotional intelligence using Machine Learning techniques. Still in development phase.</p>
         </a>
         <a class="projectCard" href="#" target="_blank" rel="noopener">
           <h3>Decentralized Key Exchange Protocol</h3>
-          <p>Bringing on key exchange protocol where users can exchange thier keys in an decentralized systems like Blockchain to ensure secure communication on end to end for peer to peer without relying on CAs </p>
+          <p>A decentralized protocol for secure peer-to-peer key exchange without central certificate authorities using blockchain principles.</p>
         </a>
       </div>
     </section>
 
-    
-
     <section class="section fade-in">
       <h2 class="sectionTitle">Contact Me</h2>
-      <p>If you’re into solving real-world problems, researching bold ideas, cooking up innovative solutions, or teaming up for hackathons that actually matter —  then hey, don’t just scroll — $ping me up and let’s connect!
-         Drop your deets here  Lets have cofee togther with our code</p>
+      <p>If you’re into solving real-world problems, researching bold ideas, cooking up innovative solutions, or teaming up for hackathons that actually matter — then hey, don’t just scroll — $ping me up and let’s connect! Drop your deets here. Let’s have coffee together with our code ☕💻</p>
 
-        
       <form class="form" action="#" method="POST">
         <input type="text" class="input" name="name" placeholder="Your Name" required />
         <input type="email" class="input" name="email" placeholder="Your Email" required />
@@ -291,21 +311,17 @@
       </form>
     </section>
 
-
     <footer class="footer">
       &copy; 2025 Guru. Crafted with ❤️ and lots of ☕
     </footer>
   </div>
 
   <script>
-    // Fade-in on scroll, one time only
     const faders = document.querySelectorAll('.fade-in');
-
     const appearOptions = {
       threshold: 0.2,
       rootMargin: "0px 0px -50px 0px"
     };
-
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -314,7 +330,6 @@
         }
       });
     }, appearOptions);
-
     faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
 </body>
